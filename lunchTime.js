@@ -5,7 +5,7 @@
 let currentTime = 13.5;  // For representing 30 minutes, use .5 (e.g., 13.5 means 13:30)
 let date = 'monday';
 
-let lunchTime = (currentTime >= 12) && (currentTime <= 13) ? true : false;
+let lunchTime = ((currentTime >= 12) && (currentTime <= 13)) ? true : false;
 
 if (lunchTime === true) {
     console.log('It\'s time for lunch.');
