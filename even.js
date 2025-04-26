@@ -9,3 +9,5 @@ for(let i = 1; i <= 50; i++) {
         console.log(i);
     }
 }
+
+// This file contains an example that prints only even numbers from 1 to 50.
