@@ -28,10 +28,10 @@ function markAsReturned(bookList, title) {
         if (bookList[i].title === title && bookList[i].borrowed === true) {
             bookList[i].borrowed = false; 
             console.log(`${title} has been marked as returned.`);
-            return; // 찾았으면 더 안 돌아도 되니 return으로 종료
+            return; // I can stop
         }
     }
-    console.log(`책 "${title}"을 찾을 수 없습니다.`);
+    console.log(`I can't find the book which "${title}"is.`);
 }
 
 printAvailableBooks(books); // books[1], books[3]
