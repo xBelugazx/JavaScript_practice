@@ -47,3 +47,52 @@ const yuJin = new IdolModel('안유진', 2003);
 // setter 사용방법
 yuJin.name = '장원영';
 console.log(yuJin);
+
+class IdolModel{
+    name;
+    year;
+
+    constructor(name, year){
+        this.name = name;
+        this.year = year;
+    }
+
+    set setName(name) {
+        this.name = name;
+    }
+}
+
+const yuJin = new IdolModel('안유진', 2003);
+
+yuJin.setName = '장원영';
+// 프로퍼티 액세스하는 것처럼 불러올 수 있고 오른쪽 값은 파라미터에 안에 입력됨
+// but 정의한 값을 변경할 수 있어서 잘 쓰이진 않음
+console.log(yuJin);
+
+class IdolModel {
+    // 프라이빗값: 값은 저장돼있으나, 외부에서 접근할 수 없는 값
+    #name;
+    year;
+
+    constructor(name, year) {
+        this.#name = name;
+        this.year = year;
+    }
+
+    // 프라이빗값을 getter로 가져옴
+    get name() {
+        return this.#name;
+    }
+
+    // 보통 get, set 이름을 똑같이 지음
+    set name(name) {
+        this.#name = name;
+    }
+}
+
+const yuJin2 = new IdolModel('안유진', 2003);
+console.log(yuJin2); // { year: 2003 }
+console.log(yuJin2.name); // 안유진
+
+yuJin2.name = '코드팩토리';
+console.log(yuJin2.name); // 코드팩토리
