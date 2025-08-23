@@ -1,1 +1,1 @@
-This file is a practice space for practicing js
+This file has a practice space for practicing js
