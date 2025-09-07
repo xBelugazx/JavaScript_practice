@@ -12,3 +12,16 @@ for(let i = 1; i <= 50; i++) {
 
 // This file contains an example that prints only even numbers from 1 to 50.
 
+
+// quiz 2
+for(let i = 0; i < 10; i++) {
+    if(i % 2 === 0) continue;
+
+    for(let j = 0; j < 10; j++) {
+        if(j % 2 === 0) continue;
+
+        console.log(i, "*", j, "=", i * j);
+    }
+}
+
+// output results except even numbers
